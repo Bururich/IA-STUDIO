@@ -1,0 +1,268 @@
+:root {
+    --white-section: #000;
+    --black-section: #FFFFFF;
+    --button-background: #FF8306;
+    --hover-button-background: #FFFFFF;
+    --hover-button-text: #8A0B8C;
+    --icons-color: #FF8306;
+}
+
+:root {
+    --podkova-font: 'Podkova', serif;
+    --bangkok-font: 'Bangkok', sans-serif;
+}
+
+ @font-face {
+    font-family: 'NATS_Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NATS Regular'), url('/assets/fonts/NATS-Regular.woff') format('woff');
+    }
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left: 68px;
+    margin-right: 68px;
+}
+
+@font-face {
+  font-family: 'Bangkok';
+  src: url('./assets/fonts/Bangkok-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    
+}
+/*                                     Header styles                             */
+
+header .container {
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 35px;
+    height: 35px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--black-section);
+    font-family: var(--podkova-font);
+    font-size: 15px;
+}
+
+/*                                        Hero Styles                                  */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--white-section);
+}
+
+.hero-text {
+  width: 100%;
+  z-index: 2;
+}
+
+.hero-title {
+  position: relative;
+  font-size: 340px;
+  font-weight: bold;
+  color: white;
+  font-family: 'NATS_Regular', sans-serif;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+ height: 300px;
+ bottom: 17%;
+}
+.hero-tagline {
+    align-self: flex-start;
+    font-family: var(--bangkok-font);
+    margin-left: 68px;
+}
+.hero-subtext {
+    text-align: right;
+    font-family: var(--podkova-font);
+    margin-right: 68px;
+}
+
+.hero-tagline,
+.hero-subtext {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.title-container {
+    display: flex;
+    height: 500px;
+}
+
+.title-year {
+  position: relative;
+  bottom: -7%;
+  right: 5%;
+    color: var(--black-section);
+    font-family: var(--bangkok-font);
+    font-size:70px;
+    writing-mode: vertical-rl; /* или vertical-lr */
+    text-orientation: var(--podkova-font);
+   text-align: center;
+   margin: 0;
+}
+
+.eclipse {
+  position: absolute;
+  bottom: 55%;
+  width: 600px;
+  z-index: 0;
+}
+
+.hero-character {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  z-index: 2;
+}
+
+.hero-strip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+/*                     About Us Styles                                  */
+
+.about-us {
+  height: 520px;
+  background-color: #fff;
+  position: relative;
+}
+
+.about-us .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.left-side h1 {
+  font-family: var(--bangkok-font);
+  font-size: 130px;
+  font-weight: 100;
+ margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.left-side p {
+  font-family: var(--bangkok-font);
+  font-size: 24px;
+  width: 400px;
+  width: max-content;
+}
+
+.link-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.projects-butt,
+.team-members-butt {
+  width: 315px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.projects-butt {
+  color: var(--black-section);
+  background-color: var(--button-background);
+}
+
+.team-members-butt {
+  color: var(--icons-color);
+  border: 1px solid var(--icons-color);
+}
+
+.projects-butt:hover {
+  background-color: var(--black-section);
+  color: var(--hover-button-text);
+  border: 1px solid var(--hover-button-text);
+  transition: 0.3s;
+}
+
+.team-members-butt:hover {
+  background-color: var(--black-section);
+  color: var(--hover-button-text);
+  border: 1px solid var(--hover-button-text);
+  transition: 0.3s;
+}
+
+.right-side {
+  display:flex;
+  margin-top: 160px;
+}
+
+.right-side h1 {
+  font-family: var(--bangkok-font);
+  font-size: 75px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.right-side .right-text-container p {
+  font-family: var(--bangkok-font);
+  font-size: 16px;
+  width: 450px;
+  margin: 0;
+}
+
+.right-logo-container p {
+  font-family: var(--bangkok-font);
+  font-size: 16px;
+  text-align: center;
+}
+
+.equal-icon {
+  position: absolute;
+  left: 43%;
+  top: 47%;
+  transform: translate(-50%, -70%);
+}
