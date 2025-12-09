@@ -1438,7 +1438,7 @@ nav {
 .contact-us {
   height: 500px;
   background-color: black;
-  background-image: url(/assets/contact-us-bg.jpg);
+  background-image: url(./assets/contact-us-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover; 
 }
