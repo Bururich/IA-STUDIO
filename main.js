@@ -16,8 +16,8 @@ toggleBtn.addEventListener('click', () => {
   });
 
   toggleIcon.src = expanded
-    ? '/assets/toggle-up-icon.png'
-    : '/assets/toggle-icon.png';
+    ? './assets/toggle-up-icon.png'
+    : './assets/toggle-icon.png';
 });
 
 document.querySelectorAll('.faq-btn').forEach(btn => {
@@ -30,12 +30,12 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
       
       item.classList.remove('active');
       answer.style.maxHeight = '0px';
-      icon.src = '/assets/plus-icon.png';
+      icon.src = './assets/plus-icon.png';
     } else {
       
       item.classList.add('active');
       answer.style.maxHeight = answer.scrollHeight + 'px';
-      icon.src = '/assets/answer-icon.png';
+      icon.src = './assets/answer-icon.png';
     }
   });
 });
@@ -157,14 +157,14 @@ function initMobileCards() {
 
       if (isHidden) {
         cards.forEach(card => card.classList.remove('hidden'));
-        togggleBtnIcon.src = '/assets/projects-toggle-up.png';
+        togggleBtnIcon.src = './assets/projects-toggle-up.png';
       } else {
         cards.forEach((card, index) => {
           if (index >= 2) {
             card.classList.add('hidden');
           }
         });
-        togggleBtnIcon.src = '/assets/projects-toggle-down.png';
+        togggleBtnIcon.src = './assets/projects-toggle-down.png';
       }
     });
   } else {

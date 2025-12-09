@@ -16,7 +16,7 @@
     font-family: 'NATS_Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('NATS Regular'), url('/assets/fonts/NATS-Regular.woff') format('woff');
+    src: local('NATS Regular'), url('./assets/fonts/NATS-Regular.woff') format('woff');
     }
 
 
