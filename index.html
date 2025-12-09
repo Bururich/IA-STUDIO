@@ -22,14 +22,32 @@
         <nav>
             <img src="/assets/logo.png" alt="Studio logo" class="nav-logo"/>
             <ul class="nav-links">
-                <li><a href="#">Послуги</a></li>
-                <li><a href="#">Калькулятор цін</a></li>
-                <li><a href="#">Контакти</a></li>
+                <li><a href="#amenitie">Послуги</a></li>
+                <li><a href="#portfolio">Портфоліо</a></li>
+                <li><a href="#contacts">Контакти</a></li>
             </ul>
             <a href="Tel:+380967984803" class="nav-contact-link"><img src="/assets/contact-logo.png" alt="Telephone icon"/></a>
         </nav>
+        <!-- бургер -->
+  <button class="burger" id="burger">&#9776;</button>
+
+  <a class="mobile-phone-link" href="tel:+38077777777">+380 777 777 777</a>
+
+  <!-- ссылка на телефон -->
+  <a href="tel:+380123456789" class="phone-link">📞 +38 (012) 345‑67‑89</a>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeBtn">&times;</button>
+  <ul>
+    <li><a class="mobile-nav" href="#amenitie">Послуги</a></li>
+    <li><a class="mobile-nav" href="#portfolio">Портфоліо</a></li>
+    <li><a class="mobile-nav" href="#contacts">Контакти</a></li>
+  </ul>
+</div>
       </div>
     </header>
+
+
     <main>
         <section class="hero">
         <div class="hero-text">
@@ -42,8 +60,12 @@
         </div>
         <img src="/assets/hero-eclipse.png" alt="hero eclipse" class="eclipse"/>
         <img src="/assets/donkey.png" class="hero-character" alt="IA Character" />
+        <img src="/assets/mobile-hero-donkey.png" alt="mobile character" class="mobile-charecter"/>
         <img src="/assets/eyes-line.png" class="hero-strip" alt="Eye strip" />
+        <img src="/assets/mobile-strip.png" alt="mobile eye strip" class="mobile-hero-strip"/>
         </section>
+
+
         <section class="about-us">
             <div class="container">
               <img src="/assets/donkey-legs.png" alt="donkey legs" class="donkey-legs"/>
@@ -51,8 +73,8 @@
                     <h1>ВІСЛЮК</h1> 
                     <p>Ми — невелика, але смілива команда, яка<br> створює сайти, що працюють.</p>
                   <div class="link-container">
-                    <a href="#" class="projects-butt">ПОДИВИТИСЯ РОБОТИ</a>
-                    <a href="#" class="team-members-butt">ПОЗНАЙОМИТИСЯ З КОМАНДОЮ</a>
+                    <a href="#portfolio" class="projects-butt">ПОДИВИТИСЯ РОБОТИ</a>
+                   <!-- <a href="#" class="team-members-butt">ПОЗНАЙОМИТИСЯ З КОМАНДОЮ</a>-->
                   </div>
                 </div>
                 <img src="/assets/equal-icon.png" alt="equal icon" class="equal-icon"/>
@@ -68,7 +90,31 @@
                 </div>
             </div>
         </section>
-        <section class="amenities">
+
+
+        <section class="mobile-about-us">
+          <div class="mobile-about-us-title-container">
+            <div class="left-mobile-title">
+              <h2>ВІСЛЮК</h2>
+            </div>
+            <img src="/assets/equal-icon.png" alt="mobile equal icon" class="mobile-equal"/>
+            <div class="mobile-right-title">
+              <p>БЕРЕМО СВОЄЮ ВПЕРТІСТЮ, ЯКІСТЮ ТА ЛЮДЯНІСТЮ!</p>
+              <h2>ПРОДАКШИН</h2>
+            </div>
+          </div>
+          <div class="mobile-logo-container">
+            <img src="/assets/about-us-logo.png"/>
+            <p class="mobile-logo-description">символ Віслюка є втіленням завзятості, впертості, вірності та працелюбності</p>
+            <p class="mobile-about-us-text">Ми — невелика, але смілива команда, яка створює сайти, що працюють.</p>
+          </div>
+          
+            <a class="go-to-projects" href="#portfolio">ПОДИВИТИСЯ РОБОТИ</a>
+  
+        </section>
+
+
+        <section class="amenities" id="amenitie">
           <div class="amenities-container">
             <h2>ПОСЛУГИ</h2>
             <div class="amenities-cards-container">
@@ -101,8 +147,8 @@
              <div class="amenities-card">
                 <div class="web-text">
                 <img src="/assets/marketing-rect.png" alt="web developing amenitie" class="amenities-card-rectangle"/>
-                <h3 class="design-title">МАРКЕТИНГ</h3>
-                <ul class="design-list">
+                <h3 class="design-title marketing-title">МАРКЕТИНГ</h3>
+                <ul class="design-list marketing-list">
                   <li><img src="/assets/amenities-card-icon.png" alt='card icon'/> таргетована реклама Meta</li>
                   <li><img src="/assets/amenities-card-icon.png" alt='card icon'/> таргетована реклама Google</li>
                   <li><img src="/assets/amenities-card-icon.png" alt='card icon'/> ведення сторінок в соц. мережах</li>
@@ -121,13 +167,15 @@
                   <li><img src="/assets/amenities-card-icon.png" alt='card icon'/> статистика</li>
                 </ul>
               </div>
-                <img src="/assets/supp-donkey.png" alt="web-developing donkey" class="amenities-card-donkey"/>
+                <img src="/assets/supp-donkey.png" alt="web-developing donkey" class="amenities-card-donkey supp-donkey"/>
               </div>
 
             </div>
-            <a class="amenities-butt" href="#">ЗАМОВИТИ КОНСУЛЬТАЦІЮ</a>
+            <a class="amenities-butt" href="#contacts">ЗАМОВИТИ КОНСУЛЬТАЦІЮ</a>
           </div>
         </section>
+
+
         <section class="how-to-buy">
           <div class="container">
             <h2 class="how-to-buy-title">ЯК МИ ПРАЦЮЄМО</h2>
@@ -169,7 +217,9 @@
               </div>
           </div>
         </section>
-        <section class="price-list">
+
+
+        <section class="price-list" id="price">
           <div class="container">
               <h2 class="price-list-title">ЦІНОУТВОРЕННЯ</h2>
               <p class="price-list-subtitle">Кожен проєкт має свої особливості й потребує окремого розрахунку</p>
@@ -187,7 +237,7 @@
                   <li><img src="/assets/amenities-card-icon.png"/>адаптація під соцмережі</li>
                   <li><img src="/assets/amenities-card-icon.png"/>набір файлів для друку і вебу</li>
                 </ul>
-                <a href="#" class="order-butt">ЗАМОВИТИ</a>
+                <a href="#contacts" class="order-butt">ЗАМОВИТИ</a>
               </div>
 
                <div class="price-card second-card-price">
@@ -202,7 +252,7 @@
                   <li><img src="/assets/amenities-card-icon.png"/>форма зворотного зв’язку</li>
                   <li><img src="/assets/amenities-card-icon.png"/>адаптив під мобільні пристрої</li>
                 </ul>
-                <a href="#" class="order-butt">ЗАМОВИТИ</a>
+                <a href="#contacts" class="order-butt">ЗАМОВИТИ</a>
               </div>
 
                <div class="price-card">
@@ -216,13 +266,15 @@
                   <li><img src="/assets/amenities-card-icon.png"/>створення рекламних креативів</li>
                   <li><img src="/assets/amenities-card-icon.png"/>оптимізація й супровід кампаній</li>
                 </ul>
-                <a href="#" class="order-butt">ЗАМОВИТИ</a>
+                <a href="#contacts" class="order-butt">ЗАМОВИТИ</a>
               </div>
 
             </div>
-            <a href="#" class="price-details-link">РОЗРАХУВАТИ ДЕТАЛЬНІШЕ</a>
+            <a href="#contacts" class="price-details-link">РОЗРАХУВАТИ ДЕТАЛЬНІШЕ</a>
           </div>
         </section>
+
+
         <section class="faq">
           <h1 class="faq-title">ЧАСТІ ЗАПИТАННЯ</h1>
           <h3 class="faq-subtitle">КОЖЕН ПРОЄКТ МАЄ СВОЇ ОСОБЛИВОСТІ Й ПОТРЕБУЄ ОКРЕМОГО РОЗРАХУНКУ</h3>
@@ -230,50 +282,171 @@
 
     <div class="faq-item">
       <div class="faq-item-title">
-       <img src="/assets/faq-icon.png" alt="question icon"/>
-       <p>Що таке IA STUDIO?</p>
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>СКІЛЬКИ ЧАСУ ЗАЙМАЄ СТВОРЕННЯ САЙТУ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
     </div>
-      <p class="faq-description">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-item-title">
-       <img src="/assets/faq-icon.png" alt="question icon"/>
-       <p>Що таке IA STUDIO?</p>
-    </div>
-      <p class="faq-description">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
+    <div class="faq-answer">
+      <p class="faq-description ">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
+      </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-item-title">
-       <img src="/assets/faq-icon.png" alt="question icon"/>
-       <p>Що таке IA STUDIO?</p>
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЧОМУ ЦІНИ РІЗНІ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
     </div>
-      <p class="faq-description">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
+    <div class="faq-answer">
+      <p class="faq-description ">Бо кожен проєкт унікальний. Сайт може бути простим, складним або настільки хитрим, що навіть наш віслюк робить серйозне обличчя. Тому оцінюємо індивідуально.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЯКЩО У МЕНЕ ОБМЕЖЕНИЙ БЮДЖЕТ, МОЖНА ЯКОСЬ ВИРІШИТИ ЦЕ ПИТАННЯ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Так, ми ставимося до цього з розумінням. Разом підберемо оптимальний формат — спрощений функціонал, поетапну розробку або мінімальний стартовий пакет, щоб ви могли запуститися без зайвих витрат.</p>
+      </div>
     </div>
 
     <div class="faq-item hidden">
       <div class="faq-item-title">
-       <img src="/assets/faq-icon.png" alt="question icon"/>
-       <p>Що таке IA STUDIO?</p>
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЧИ НАДАЄТЕ ТЕХПІДТРИМКУ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
     </div>
-      <p class="faq-description">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
-    </div>
-
-    <div class="faq-item hidden">
-      <div class="faq-item-title">
-       <img src="/assets/faq-icon.png" alt="question icon"/>
-       <p>Що таке IA STUDIO?</p>
-    </div>
-      <p class="faq-description">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
+    <div class="faq-answer">
+      <p class="faq-description ">Так. Після запуску ми не зникаємо: оновлення, правки, нові сторінки — усе можемо додати.</p>
+      </div>
     </div>
 
     <div class="faq-item hidden">
       <div class="faq-item-title">
-       <img src="/assets/faq-icon.png" alt="question icon"/>
-       <p>Що таке IA STUDIO?</p>
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>НА ЧОМУ ВИ СТВОРЮЄТЕ САЙТ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
     </div>
-      <p class="faq-description">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
+    <div class="faq-answer">
+      <p class="faq-description ">На сучасних технологіях: HTML/CSS/JS, WordPress, Shopify. Ваш сайт буде швидким, адаптивним і адекватним — як наш віслюк уранці після кави.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЧИ БУДЕ САЙТ ГАРНО ВИГЛЯДАТИ НА ТЕЛЕФОНІ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Обов’язково. Ми робимо адаптив під усі пристрої — від великого монітора до вашого улюбленого смартфону.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>А ОПЛАТИ, КОРЗИНИ, ДОСТАВКА?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Для інтернет-магазинів підключаємо все: корзину, оплату карткою, Nova Poshta, WayForPay, LiqPay та інші сервіси.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЯКІ МАТЕРІАЛИ ПОТРІБНІ НА СТАРТІ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Залежить від складності. Лендінг робимо швидко — як віслюк біжить по моркву. Багатосторінковий сайт чи магазин — трохи довше. У середньому від 3 днів до 10 днів.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЧИ МОЖУ Я ВНОСИТИ ПРАВКИ ПІД ЧАС РОБОТИ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Так! Ми працюємо в кілька етапів, і ви можете коригувати макети та функціонал на кожному з них.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЧИ ПРАЦЮЄТЕ З ГОТОВИМИ ДИЗАЙНАМИ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Так, можемо зверстати ваш макет або адаптувати його під технічні вимоги.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЩО ВХОДИТЬ У РОЗРОБКУ ЛОГОТИПУ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Бриф, дослідження, кілька концепцій, допрацювання та повний комплект файлів. Плюс — улюблений варіант вашого віслюка, але це не обов’язково враховувати.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>А АЙДЕНТИКУ РОБИТЕ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Звісно! Логотип, кольори, шрифти, патерни, іконки — усе, щоб ваш бренд упізнавали навіть у темряві.</p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-item-title">
+       <img src="/assets/faq-icon.png" alt="question icon" class="question-icon"/>
+       <p>ЧИ ЗАЙМАЄТЕСЬ ВИ РЕКЛАМОЮ?</p>
+       <button class="faq-btn" type="button">
+       <img src="/assets/plus-icon.png" alt="plus icon" class="answer-icon" />
+       </button>
+    </div>
+    <div class="faq-answer">
+      <p class="faq-description ">Так! Ми можемо налаштувати рекламні кампанії в Google та Meta (Facebook/Instagram), а також вести ваші соцмережі. Наш віслюк добре розуміється на просуванні — особливо коли йдеться про увагу й трафік</p>
+      </div>
     </div>
 
   </div>
@@ -281,7 +454,205 @@
   <button class="faq-toggle">
     <img src="/assets/toggle-icon.png" alt="toggle icon for button" class="faq-icon">
   </button>
+</section>
+
+
+<section class="projects" id="portfolio">
+  <div class="container">
+    <h2 class="projects-title">НАШІ РОБОТИ</h2>
+    <div class="projects-cont">
+      <button class="scroll-btn left"><img src="/assets/projects-arrow-left.png" /></button>
+    <div class="projects-wrapper">
+
+      <div class="project-card">
+        <div class="projects-description">
+        <h3 class="project-name">WEB-РОЗРОБКА</h3>
+       <ul class="project-type-list">
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Шаблон</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Таргетована реклама Meta</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Технічна підтримка</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Запуск</li>
+       </ul> 
+      </div>
+        <img src="/assets/husky-report.png" alt="project 1" class="project-image"/>
+      <a class="link-to-project" href="#">
+        <img src="/assets/link-icon.png" alt="link icon" class="project-link-icon"/>
+      </a>
+      </div>
+
+      <div class="project-card ">
+        <div class="projects-description">
+        <h3 class="project-name">WEB-РОЗРОБКА</h3>
+       <ul class="project-type-list">
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Шаблон</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Таргетована реклама Meta</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Технічна підтримка</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Запуск</li>
+       </ul> 
+      </div>
+        <img src="/assets/suziria.png" alt="project 1" class="project-image"/>
+      <a class="link-to-project" href="https://suziria-krop.com/">
+        <img src="/assets/link-icon.png" alt="link icon" class="project-link-icon"/>
+      </a>
+      </div>
+
+      <div class="project-card ">
+        <div class="projects-description">
+        <h3 class="project-name">WEB-РОЗРОБКА, АЙДЕНТИКА</h3>
+       <ul class="project-type-list">
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Сайт-Шаблон</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Панель адміністратора</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Технічна підтримка</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Запуск</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Айдентика: логотип, кольори,<BR> шрифти, поліграфічна продукція</li>
+       </ul> 
+      </div>
+        <img src="/assets/green-kvartal.png" alt="project 1" class="project-image"/>
+      <a class="link-to-project" href="https://greenkvartal.com/">
+        <img src="/assets/link-icon.png" alt="link icon" class="project-link-icon"/>
+      </a>
+      </div>
+
+      <div class="project-card ">
+        <div class="projects-description">
+        <h3 class="project-name">WEB-РОЗРОБКА, ЛОГОТИП</h3>
+       <ul class="project-type-list">
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Сайт -Шаблон</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Оновлення контенту</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Технічна підтримка</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Запуск</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Розробка логотипу</li>
+       </ul> 
+      </div>
+        <img src="/assets/web-develop-proj.png" alt="project 1" class="project-image"/>
+      <a class="link-to-project" href="#">
+        <img src="/assets/link-icon.png" alt="link icon" class="project-link-icon"/>
+      </a>
+      </div>
+
+       <div class="project-card">
+        <div class="projects-description">
+        <h3 class="project-name">ЛОГОТИП</h3>
+       <ul class="project-type-list">
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Розробка логотипу</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Фірмова палітра кольорів</li>
+        <li class="project-type-item"><img src="assets/amenities-card-icon.png" />Фірмовий шрифт</li>
+       </ul> 
+      </div>
+        <img src="/assets/logo-develop.png" alt="project 1" class="project-image"/>
+      <a class="link-to-project" href="#">
+        <img src="/assets/link-icon.png" alt="link icon" class="project-link-icon"/>
+      </a>
+      </div>
+<button id="toggleCards">
+    <img src="/assets/projects-toggle-down.png" alt="toggle icon for button" class="faq-icon">
+  </button>
+    </div>
+    
+    <button class="scroll-btn right"><img src="/assets/projects-arrow-right.png" /></button>
+    <div class="mobile-controls">
+
+  </div>
+    </div>
+  </div>
+</section>
+<!--
+<section class="team-members">
+  <h2 class="team-title">КОМАНДА ВІСЛЮКІВ</h2>
+  <div class="team-cards-container">
+
+    <div class="team-card">
+         <img src="/assets/vyasheslav-photo.png" alt="Vyasheslav's photo" class="team-photo"/>
+         <p class="member-name">В'ЯЧЕСЛВА</p>
+         <p class="member-position">фул стак розробник</p>
+         <p class="member-description">Мудрий віслюк-кодер, який пише бекенд і фронтенд так само легко, як інші жують сіно. Якщо проєкт складний — він тільки посміхається й каже: «Зараз зробимо».</p>
+    </div>
+
+    <div class="team-card">
+         <img src="/assets/darynas-new-photo.png" alt="Daryna's photo" class="team-photo"/>
+         <p class="member-name">ДАРИНА</p>
+         <p class="member-position">UX/UI, айдентика, графічний дизайн</p>
+         <p class="member-description">Той самий віслюк, що бачить красу навіть у найкривішому ескізі. Вона вирівнює хаос, додає стилю і робить так, щоб будь-який інтерфейс муркав від задоволення.</p>
+    </div>
+
+    <div class="team-card">
+         <img src="/assets/irinas-photo.png" alt="Irina's photo" class="team-photo"/>
+         <p class="member-name">ІРИНА</p>
+         <p class="member-position">маркетинг, реклама</p>
+         <p class="member-description">Віслюк, у якого замість крові тече реклама. Вона знає, як привернути увагу, навіть якщо клієнт думав «просто глянути». Її кампанії заряджені енергією та хитрим віслючим шармом.</p>
+    </div>
+
+    <div class="team-card">
+         <img src="/assets/romans-photo.png" alt="Roman's photo" class="team-photo"/>
+         <p class="member-name">РОМАН</p>
+         <p class="member-position">фронт-енд, підтримка</p>
+         <p class="member-description">Наш відповідальний віслюк-технік. Якщо щось ламиться, підвисає або поводиться дивно — він уже поруч, з гайковим ключем та залізною витримкою.</p>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="contact-us" id="contacts">
+  <div class="contact-us-container">
+    <div class="contact-title-container">
+    <h2 class="contact-us-title">ПОГНАЛИ!</h2>
+    <p class="contact-us-subtitle">ВІСЛЮКИ ВЖЕ ГОТОВІ БОДНУТИ ВАШ ПРОЄКТ</p>
+    </div>
+
+    <form class="contact-form" id="tgForm">
+  <div class="form-row">
+    <div class="form-group">
+      <input type="text" id="name" name="name" required placeholder="" />
+      <label for="name">Ім’я</label>
+    </div>
+    <div class="form-group">
+      <input type="tel" id="phone" name="phone" required placeholder="" />
+      <label for="phone">Телефон</label>
+    </div>
+    <div class="form-group">
+      <textarea id="message" name="message" required placeholder=""></textarea>
+      <label for="message">Повідомлення</label>
+    </div>
+  </div>
+
+  <button type="submit" class="submit-btn">НАДІСЛАТИ</button>
+</form>
+
+<div id="formAlert" class="form-alert">Повідомлення успішно надіслано!</div>
+
+  </div>
+  </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <img src="/assets/logo.png" alt="footer logo" class="footer-logo"/>
+        <ul class="amenities">
+          <li><a href="#amenitie">ПОСЛУГИ</a></li>
+          <li><a href="#contacts">КОНТАКТИ</a></li>
+        </ul>
+        <ul class="links">
+          <li><a href="#price">ЦІНОУТВОРЕННЯ</a></li>
+          <li><a href="#portfolio">ПОРТФОЛІО</a></li>
+        </ul>
+        <div class="right-footer-block">
+          <p>КОНТАКТИ</p>
+          <div class="social-links">
+            <a href="#">
+            <img src="/assets/viber-icon.png"/>
+          </a>
+          <a href="#">
+            <img src="/assets/tg-icon.png"/>
+            </a>
+            <a href="#">
+            <img src="/assets/whatsUp-icon.png"/>
+            </a>
+          </div>
+          <a href="tel:+380 77 777 77 77" class="tel-link">+380 77 777 77 77</a>
+        </div>
+
+      </div>
+    </footer>
     
   <script src="/main.js"></script>
 
