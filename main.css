@@ -62,7 +62,9 @@ nav {
     align-items: center;
 }
 
-
+* {
+  outline: 1px solid red;
+}
 
 .nav-logo {
     width: 35px;
