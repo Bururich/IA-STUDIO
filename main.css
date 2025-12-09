@@ -101,6 +101,7 @@ nav {
   color: var(--black-section);
   border-radius: 20px;
   transition: ease-in-out 0.3s;
+  width: 20px;
 }
 
 .burger:hover {
