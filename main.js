@@ -61,8 +61,8 @@ rightBtn.addEventListener('click', () => {
 document.getElementById('tgForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const token = "8484145066:AAGiNE393K7_VfjrsHVdk9fE3-3isC9kCnc";
-  const chatId = "780514846";
+  const token = process.env.BOT_TOKEN;
+  const chatId = process.env.CHAT_ID;
 
   const name = this.name.value;
   const phone = this.phone.value;
