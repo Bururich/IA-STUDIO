@@ -62,9 +62,7 @@ nav {
     align-items: center;
 }
 
-* {
-  outline: 1px solid red;
-}
+
 
 .nav-logo {
     width: 35px;
@@ -101,7 +99,7 @@ nav {
   color: var(--black-section);
   border-radius: 20px;
   transition: ease-in-out 0.3s;
-  width: 20px;
+  width: 40px !important;
 }
 
 .burger:hover {
