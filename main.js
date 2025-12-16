@@ -47,67 +47,85 @@ const wrapper = document.querySelector('.projects-wrapper');
 const leftBtn = document.querySelector('.scroll-btn.left');
 const rightBtn = document.querySelector('.scroll-btn.right');
 
-leftBtn.addEventListener('click', () => {
-  wrapper.scrollBy({ left: -300, behavior: 'smooth' });
-});
+const step = 600; // шаг скролла
+const maxScroll = wrapper.scrollWidth - wrapper.clientWidth; // максимум вправо
 
 rightBtn.addEventListener('click', () => {
-  wrapper.scrollBy({ left: 300, behavior: 'smooth' });
+  if (wrapper.scrollLeft + step >= maxScroll) {
+    // если дошли до конца → возвращаемся в начало
+    wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    wrapper.scrollBy({ left: step, behavior: 'smooth' });
+  }
 });
+
+leftBtn.addEventListener('click', () => {
+  if (wrapper.scrollLeft - step <= 0) {
+    // если дошли до начала → прыгаем в конец
+    wrapper.scrollTo({ left: maxScroll, behavior: 'smooth' });
+  } else {
+    wrapper.scrollBy({ left: -step, behavior: 'smooth' });
+  }
+});
+
 
 // End of projects horizontal scroll
 // Telegram form submission
 
-document.getElementById('tgForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  const forms = document.querySelectorAll('.tgForm');
+  const alertBox = document.getElementById('formAlert');
 
-  const token = process.env.BOT_TOKEN;
-  const chatId = process.env.CHAT_ID;
+  forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-  const name = this.name.value;
-  const phone = this.phone.value;
-  const message = this.message.value;
+      const token = "8484145066:AAGiNE393K7_VfjrsHVdk9fE3-3isC9kCnc";
+      const chatId = "780514846";
 
-  const text = `Нове повідомлення з сайту:\n👤 Ім'я: ${name}\n📞 Телефон: ${phone}\n💬 Повідомлення: ${message}`;
+      const name = this.name.value;
+      const phone = this.phone.value;
+      const message = this.message.value;
 
-  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: text,
-      parse_mode: "HTML"
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
-    const alertBox = document.getElementById('formAlert');
+      const text = `Нове повідомлення з сайту:\n👤 Ім'я: ${name}\n📞 Телефон: ${phone}\n💬 Повідомлення: ${message}`;
 
-    if (data.ok) {
-      this.reset();
-      alertBox.textContent = " Повідомлення успішно надіслано!";
-      alertBox.style.background = "#00c853";
-    } else {
-      alertBox.textContent = "❌ Помилка при відправці.";
-      alertBox.style.background = "#d50000";
-    }
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: "HTML"
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.ok) {
+          this.reset();
+          alertBox.style.background = "#ffffff";
+        } else {
+          alertBox.textContent = "❌ Помилка при відправці.";
+          alertBox.style.background = "#d50000";
+        }
 
-    alertBox.classList.add('show');
-    setTimeout(() => {
-      alertBox.classList.remove('show');
-    }, 3000);
-  })
-  .catch(err => {
-    console.error(err);
-    const alertBox = document.getElementById('formAlert');
-    alertBox.textContent = "⚠️ Помилка з'єднання.";
-    alertBox.style.background = "#d50000";
-    alertBox.classList.add('show');
-    setTimeout(() => {
-      alertBox.classList.remove('show');
-    }, 3000);
+        alertBox.classList.add('show');
+        setTimeout(() => {
+          alertBox.classList.remove('show');
+        }, 3000);
+      })
+      .catch(err => {
+        console.error(err);
+        alertBox.textContent = "⚠️ Помилка з'єднання.";
+        alertBox.style.background = "#d50000";
+        alertBox.classList.add('show');
+        setTimeout(() => {
+          alertBox.classList.remove('show');
+        }, 3000);
+      });
+    });
   });
 });
+
 
 // End of Telegram form submission
 //  Burger menu functionality
@@ -181,3 +199,67 @@ initMobileCards();
 window.addEventListener('resize', initMobileCards);
 
 // End of projects cards toggle for mobile
+// Price details modal //
+
+const openModalBtn = document.getElementById('detailsModal');
+const detailsModal = document.getElementsByClassName('details-modal')[0];
+const closeDetailsBtn =document.getElementsByClassName('close-details-btn')[0];
+
+openModalBtn.addEventListener('click', () => {
+  detailsModal.classList.add('show');
+});
+
+closeDetailsBtn.addEventListener('click', () => {
+  detailsModal.classList.remove('show');
+});
+
+
+// End of price details modal //
+// Disable submit button until form is filled //
+
+const detailsModalCheck = document.getElementsByClassName('details-modal');
+const inputs = detailsModalCheck[0].querySelectorAll('input, textarea');
+const submitBtn = detailsModalCheck[0].querySelector('.details-submit');
+
+function checkForm() {
+  // проверяем, что все поля непустые
+  let allFilled = true;
+  inputs.forEach(input => {
+    if (!input.value.trim()) {
+      allFilled = false;
+    }
+  });
+
+  submitBtn.disabled = !allFilled;
+}
+
+// слушаем ввод в каждом поле
+inputs.forEach(input => {
+  input.addEventListener('input', checkForm);
+});
+
+checkForm(); // начальная проверка при загрузке страницы
+// end of disable submit button until form is filled //
+//disable for contact form too//
+
+const contactForm = document.getElementsByClassName('contact-form');
+const contactInputs = contactForm[0].querySelectorAll('.contact-textarea, .contact-input');
+const contactSubmitBtn = contactForm[0].querySelector('.submit-btn');
+
+function checkContactForm() {
+  let allFilled = true;
+  contactInputs.forEach(input => {
+    if (!input.value.trim()) {
+      allFilled = false;
+    }
+  });
+
+  contactSubmitBtn.disabled = !allFilled;
+}
+
+contactInputs.forEach(input => {
+  input.addEventListener('input', checkContactForm);
+});
+
+checkContactForm();
+//end of disable for contact form too//

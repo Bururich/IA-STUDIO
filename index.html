@@ -145,7 +145,7 @@
              <div class="amenities-card">
                 <div class="web-text">
                 <img src="./assets/marketing-rect.png" alt="web developing amenitie" class="amenities-card-rectangle"/>
-                <h3 class="design-title marketing-title">МАРКЕТИНГ</h3>
+                <h3 class=" marketing-title">МАРКЕТИНГ</h3>
                 <ul class="design-list marketing-list">
                   <li><img src="./assets/amenities-card-icon.png" alt='card icon'/> таргетована реклама Meta</li>
                   <li><img src="./assets/amenities-card-icon.png" alt='card icon'/> таргетована реклама Google</li>
@@ -268,8 +268,35 @@
               </div>
 
             </div>
-            <a href="#contacts" class="price-details-link">РОЗРАХУВАТИ ДЕТАЛЬНІШЕ</a>
+            <a  class="price-details-link" id="detailsModal">РОЗРАХУВАТИ ДЕТАЛЬНІШЕ</a>
           </div>
+
+          <div class="details-modal">
+            <div class="absolute-wrapper">
+            <button class="close-details-btn">&times;</button>
+            <h1 class="modal-title">ЗВОРОТНІЙ ЗВ'ЯЗОК</h1>
+            <form class="details-form tgForm">  
+              <div class="form-wrapper">          
+               <div class="details-form-row">
+                 <div class="details-group">
+                   <label for="name">Ім’я</label>
+                   <input type="text" id="name" name="name" required placeholder="" />                 
+                 </div>
+                 <div class="details-group">
+                  <label for="phone">Телефон</label>
+                   <input type="tel" id="phone" name="phone" required placeholder="" />                  
+                 </div>
+                </div>
+                 <div class="details-group textarea-group">
+                  <label for="message">Повідомлення</label>
+                   <textarea id="message" name="message" required placeholder=""></textarea>                  
+                 </div>
+               </div> 
+                  <button type="submit" class="details-submit" disabled>НАДІСЛАТИ</button>
+            </form>
+            <img src="./assets/details-donkey.png" alt="form alert donkey" class="details-donkey"/>
+         </div> 
+        </div>
         </section>
 
 
@@ -473,7 +500,7 @@
        </ul> 
       </div>
         <img src="./assets/husky-report.png" alt="project 1" class="project-image"/>
-      <a class="link-to-project" href="#">
+      <a class="link-to-project" href="https://huskyresort.site">
         <img src="./assets/link-icon.png" alt="link icon" class="project-link-icon"/>
       </a>
       </div>
@@ -523,7 +550,7 @@
        </ul> 
       </div>
         <img src="./assets/web-develop-proj.png" alt="project 1" class="project-image"/>
-      <a class="link-to-project" href="#">
+      <a class="link-to-project" href="https://dkbudservice.com/">
         <img src="./assets/link-icon.png" alt="link icon" class="project-link-icon"/>
       </a>
       </div>
@@ -597,26 +624,30 @@
     <p class="contact-us-subtitle">ВІСЛЮКИ ВЖЕ ГОТОВІ БОДНУТИ ВАШ ПРОЄКТ</p>
     </div>
 
-    <form class="contact-form" id="tgForm">
+    <form class="contact-form tgForm" >
   <div class="form-row">
     <div class="form-group">
-      <input type="text" id="name" name="name" required placeholder="" />
-      <label for="name">Ім’я</label>
+      <input type="text" id="name" name="name" required placeholder="" class="contact-input" />
+      <label class="contacts-label" for="name">Ім’я</label>
     </div>
     <div class="form-group">
-      <input type="tel" id="phone" name="phone" required placeholder="" />
-      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" name="phone" required placeholder="" class="contact-input" />
+      <label class="contacts-label" for="phone">Телефон</label>
     </div>
     <div class="form-group">
-      <textarea id="message" name="message" required placeholder=""></textarea>
-      <label for="message">Повідомлення</label>
+      <textarea class="contact-textarea" id="message" name="message" required placeholder=""></textarea>
+      <label class="contacts-label" for="message">Повідомлення</label>
     </div>
   </div>
 
-  <button type="submit" class="submit-btn">НАДІСЛАТИ</button>
+  <button type="submit" class="submit-btn" disabled>НАДІСЛАТИ</button>
 </form>
 
-<div id="formAlert" class="form-alert">Повідомлення успішно надіслано!</div>
+<div id="formAlert" class="form-alert">
+  <img src="./assets/formAlert-donkey.png" alt="appreciated  donkey" class="form-alert-donkey"/>
+  <p class="title-alert">ДЯКУЄМО ЗА ВАШЕ ПОВІДОМЛЕННЯ!</p>
+  <p class="alert-subtext">МИ ЗВ'ЯЖЕМОСЬ З ВАМИ В НАЙБЛИЖЧИЙ ЧАС</p>
+</div>
 
   </div>
   </section>
@@ -627,7 +658,6 @@
         <img src="./assets/logo.png" alt="footer logo" class="footer-logo"/>
         <ul class="amenities">
           <li><a href="#amenitie">ПОСЛУГИ</a></li>
-          <li><a href="#contacts">КОНТАКТИ</a></li>
         </ul>
         <ul class="links">
           <li><a href="#price">ЦІНОУТВОРЕННЯ</a></li>

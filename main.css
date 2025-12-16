@@ -304,6 +304,36 @@ nav {
   display: none;
 }
 
+@media (width: 1920px) {
+  .hero-title {
+    font-size: 380px;
+    height: 280px;
+    bottom: 6%;
+  }
+
+  .hero-subtext {
+    position: relative;
+    bottom: 60%;
+    right: 10%;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .title-year {
+    font-size: 70px;
+    bottom: -26%;
+    right: 10%;
+  }
+
+  .eclipse {
+    width: 650px;
+    bottom: 45%;
+    right: 35%;
+  }
+
+ 
+}
+
 @media (width: 1440px) {
   .hero-title {
     font-size: 280px;
@@ -466,10 +496,8 @@ nav {
 }
 
 .projects-butt:hover {
-  background-color: var(--black-section);
-  color: var(--hover-button-text);
-  border: 1px solid var(--hover-button-text);
-  transition: 0.3s;
+  background: linear-gradient(180deg, #E47608, #FFF0E2);
+  color: var(--black-section);
 }
 
 .team-members-butt:hover {
@@ -535,7 +563,25 @@ nav {
   }
 
   .donkey-legs {
-    right: 42.7%;
+    right: 42.3%;
+    top: 0;
+  }
+
+  .left-side h1 {
+    font-size: 183px;
+  }
+
+  .right-side h1 {
+    font-size:103px;
+  }
+
+  .right-text-container p {
+    font-size: 22px;
+    width: 500px;
+  }
+
+  .equal-icon {
+    left: 45%;
   }
 }
 
@@ -645,9 +691,8 @@ nav {
   }
 
   .go-to-projects:hover {
-    background-color: var(--black-section);
-    border: 1px solid var(--hover-button-text);
-     color: var(--hover-button-text);
+    background: linear-gradient(180deg, #E47608, #FFF0E2);
+     color: var(--hover-button-background);
   }
 }
 
@@ -710,8 +755,18 @@ nav {
 }
 
 .marketing-donkey{
-  right: 95%;
-  top: -28%;
+  right: 97%;
+  top: -10%;
+  height: 280px;
+}
+
+.marketing-title {
+  margin-top: 40px !important;
+  margin-left:200px !important;
+}
+
+.marketing-list {
+  margin-left: 200px !important;
 }
 
 .design-list {
@@ -742,7 +797,7 @@ nav {
 .design-title {
   margin-left: 180px !important;
   margin-bottom: 10px !important;
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 .supp-title {
@@ -765,6 +820,7 @@ nav {
   font-size: 16px;
   margin-bottom: 10px;
   width: max-content;
+  font-family: Roboto condensed, sans-serif;
 }
 
 .amenities-butt {
@@ -777,13 +833,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid var(--button-background);
 }
 
 .amenities-butt:hover {
-  background-color: var(--black-section);
-  color: var(--hover-button-text);
-  border: 1px solid var(--hover-button-text);
-  transition: 0.3s;
+  background: linear-gradient(180deg, #E47608, #FFF0E2);
+  color: var(--black-section);
 }
 
 @media (max-width: 768px) {
@@ -934,14 +989,14 @@ nav {
 }
 
 .step-description {
-  font-family: var(--bangkok-font);
+  font-family: Roboto Condensed, sans-serif;
   font-weight: bold;
   font-size: 18px;
   text-align: center;
 }
 
 .step-subdescription {
-  font-family: var(--bangkok-font);
+  font-family: Roboto Condensed, sans-serif;
   font-size: 16px;
   text-align: center;
 }
@@ -954,7 +1009,7 @@ nav {
 }
 
 .ps-notes {
-  font-family: var(--bangkok-font);
+  font-family: Roboto Condensed, sans-serif;
   font-size: 12px;
   color: var(--white-section);
   text-align: center;
@@ -1034,6 +1089,7 @@ nav {
 .price-description {
   font-size: 18px;
   text-align: center;
+  font-family: Roboto condensed, sans-serif;
 }
 
 .price-features {
@@ -1048,26 +1104,25 @@ nav {
 
 .price-features li {
   font-size: 16px;
+  font-family: Roboto condensed, sans-serif;
 }
 
 .order-butt {
   text-decoration: none;
   width: 90%;
   height: 40px;
-  background-color: var(--button-background);
-  color: var(--black-section);
+  background-color: var(--black-section);
+  border: 1px solid var(--button-background);
+  color: var(--button-background);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .order-butt:hover {
-  background-color: var(--black-section);
-  color: var(--hover-button-text);
-  border: 1px solid var(--hover-button-text);
-  transition: 0.3s;
+  background: linear-gradient(360deg, #E47608, #FFF0E2);
 }
 
 .card-logo {
@@ -1098,14 +1153,140 @@ nav {
 }
 
 .price-details-link:hover {
-  background-color: var(--black-section);
-  color: var(--hover-button-text);
-  border: 1px solid var(--hover-button-text);
-  transition: 0.3s;
+  background: linear-gradient(180deg, #E47608, #FFF0E2);
+  color: var(--black-section);
 }
 
 .second-card-features li {
   font-size: 12px;
+}
+
+.details-modal {
+  display: none;
+  position: fixed;
+  width: 800px;
+  height: 450px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-title {
+text-align: center;
+}
+
+.details-modal.show {
+  display: block;
+  z-index: 1000;
+}
+
+.details-form {
+  width: 550px;
+  height: 200px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.form-wrapper {
+  display: flex;
+  height: 200px;
+  gap: 24px;
+}
+
+.details-form-row {
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;
+ gap: 10px;
+}
+
+.details-submit {
+  width: 315px;
+  height: 40px;
+  background-color: var(--button-background);
+  color: var(--black-section);
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.details-submit::before {
+  background: linear-gradient(180deg, #FF8306, #FFFFFF);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 8px;
+}
+
+.details-submit:hover::before {
+  opacity: 1;
+  border: 1px solid var(--icons-color);
+}
+
+.details-submit:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.textarea-group {
+  margin-top: 0;
+  height: 100%;
+}
+
+.textarea-group textarea {
+  resize: none;
+  height: 100%;
+  border: 1px solid var(--icons-color)
+}
+
+.details-group {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+.details-group input {
+  border: 1px solid var(--icons-color);
+  height: 30px;
+}
+
+.details-group label {
+  margin-bottom: 5px;
+}
+
+.details-donkey {
+  position: absolute;
+  bottom: -141px;
+  right: 1px;
+  width: 240px;
+  height: 400px;
+}
+
+.absolute-wrapper {
+  position: relative;
+}
+
+.close-details-btn {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background: var(--button-background);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1205,6 +1386,8 @@ nav {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #fff;
+  padding-bottom: 80px;
 }
 
 .faq-toggle img {
@@ -1303,7 +1486,7 @@ nav {
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
 
-  width: 1100px;           
+  width: 1200px;           
   margin: 0 auto;          
   padding: 1rem 0;
   scrollbar-width: none;
@@ -1543,20 +1726,20 @@ nav {
 
 
 
-textarea {
+.contact-textarea {
   height: 70px;
 }
 
-input,
-textarea {
+.contact-input,
+.contact-textarea {
   width: 100%;
   padding: 0.4rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: 1px solid #ccc;
   background: #fff;
 }
 
-label {
+.contacts-label {
   position: absolute;
   top: 20%;
   left: 0.75rem;
@@ -1568,10 +1751,10 @@ label {
   pointer-events: none;
 }
 
-input:focus + label,
-input:valid + label,
-textarea:focus + label,
-textarea:valid + label {
+.contact-input:focus + .contacts-label,
+.contact-input:valid + .contacts-label,
+.contact-textarea:focus + .contacts-label,
+.contact-textarea:valid + .contacts-label {
   top: -0.6rem;
   font-size: 0.75rem;
   color: #FFFFFF;
@@ -1580,7 +1763,7 @@ textarea:valid + label {
 .submit-btn {
   align-self: center;
   padding: 0.75rem 2rem;
-  background: var(--hover-button-text);
+  background: var(--button-background);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -1591,9 +1774,13 @@ textarea:valid + label {
 }
 
 .submit-btn:hover {
-  background: var(--black-section);
-  color: var(--hover-button-text);
-  border: 1px solid var(--hover-button-text);
+ background: linear-gradient(180deg, #E47608, #FFF0E2);
+  color: var(--black-section);
+}
+
+.submit-btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
 }
 
 .form-alert {
@@ -1609,12 +1796,35 @@ textarea:valid + label {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.9);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 999;
+  z-index: 999999;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .form-alert.show {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+.form-alert-donkey {
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.title-alert {
+  font-family: var(--podkova-font);
+  font-size: 24px;
+  font-weight: 100;
+  color: var(--white-section);
+}
+
+.alert-subtext {
+  font-size: 12px;
+  color: var(--white-section);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
