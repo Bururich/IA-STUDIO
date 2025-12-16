@@ -398,12 +398,12 @@ nav {
   .title-year{
     font-size: 12px;
     bottom: 11%;
-    right: 1.6%;
+    right: 6.5%;
   }
 
   .eclipse {
     width: 350px;
-    bottom: 58.8%;
+    bottom: 59.1%;
   }
 
   .mobile-charecter {
@@ -900,7 +900,7 @@ nav {
 
   .marketing-title {
     margin-left: 20px !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
   }
 
   .marketing-list {
@@ -915,7 +915,7 @@ nav {
 
   .supp-title {
     margin-left: 160px !important;
-    margin-top: 60px !important;
+    margin-top: 70px !important;
   }
 
   .supp-list {
@@ -1298,6 +1298,40 @@ text-align: center;
 
   .price-card {
     width: 90%;
+  }
+
+  .details-modal {
+    width: 90%;
+    height: auto;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .close-details-btn {
+    font-size: 1.5rem;
+  }
+
+  .details-form {
+    width: 60%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .details-group {
+    width: 100%;
+  }
+  .details-donkey {
+    display: none;
+  }
+
+  .details-submit {
+    width: 250px;
+    margin-top: 10px;
+    margin-left:90%;
   }
 }
 
@@ -1841,6 +1875,14 @@ text-align: center;
 
   .form-group {
     max-width: 290px;
+  }
+
+  .form-alert {
+    width: 80%;
+  }
+
+  .title-alert {
+    font-size: 18px;
   }
 }
 
