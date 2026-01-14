@@ -4,6 +4,8 @@ const toggleIcon = toggleBtn.querySelector('.faq-icon');
 const hiddenItems = document.querySelectorAll('.faq-item.hidden');
 let expanded = false;
 
+
+
 toggleBtn.addEventListener('click', () => {
   expanded = !expanded;
 
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       const token = "8484145066:AAGiNE393K7_VfjrsHVdk9fE3-3isC9kCnc";
-      const chatId = "780514846";
+      const chatId = "8459258829";
 
       const name = this.name.value;
       const phone = this.phone.value;
@@ -207,10 +209,12 @@ const closeDetailsBtn =document.getElementsByClassName('close-details-btn')[0];
 
 openModalBtn.addEventListener('click', () => {
   detailsModal.classList.add('show');
+  document.getElementById('overlay').classList.add('show');
 });
 
 closeDetailsBtn.addEventListener('click', () => {
   detailsModal.classList.remove('show');
+  document.getElementById('overlay').classList.remove('show');
 });
 
 
@@ -222,7 +226,7 @@ const inputs = detailsModalCheck[0].querySelectorAll('input, textarea');
 const submitBtn = detailsModalCheck[0].querySelector('.details-submit');
 
 function checkForm() {
-  // проверяем, что все поля непустые
+  
   let allFilled = true;
   inputs.forEach(input => {
     if (!input.value.trim()) {
@@ -233,12 +237,12 @@ function checkForm() {
   submitBtn.disabled = !allFilled;
 }
 
-// слушаем ввод в каждом поле
+
 inputs.forEach(input => {
   input.addEventListener('input', checkForm);
 });
 
-checkForm(); // начальная проверка при загрузке страницы
+checkForm(); 
 // end of disable submit button until form is filled //
 //disable for contact form too//
 

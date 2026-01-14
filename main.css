@@ -439,6 +439,10 @@ nav {
 
 /*                     About Us Styles                                  */
 
+#AboutUs {
+  scroll-margin-top: 120px;
+}
+
 .about-us {
   height: 520px;
   background-color: #fff;
@@ -862,6 +866,14 @@ nav {
     width: 95%;
     height: auto;
   }
+
+ .web-card {
+  padding-top: 20px;
+ }
+
+ .mark-card {
+  padding-top: 20px;
+ }
 
   .web-text h3 {
     font-size: 20px;
@@ -1307,6 +1319,20 @@ text-align: center;
   padding-right: 10px;
 }
 
+.overlay { position: fixed; inset: 0; /* top:0; right:0; bottom:0; left:0 */ 
+  background: rgba(0, 0, 0, 0.6); 
+  opacity: 0; 
+  pointer-events: none; 
+  transition: 0.3s;
+ } 
+ .overlay.show { 
+  opacity: 1; 
+  pointer-events: all; 
+}
+
+.overlay { z-index: 1000; 
+}
+
 @media (max-width: 768px) {
   .price-cards {
     flex-direction: column;
@@ -1350,6 +1376,10 @@ text-align: center;
     width: 250px;
     margin-top: 10px;
     margin-left:90%;
+  }
+
+  .textarea-group {
+    width: 150px;
   }
 }
 
@@ -1797,7 +1827,7 @@ text-align: center;
 
 .contacts-label {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 0.75rem;
   transform: translateY(-50%);
   
@@ -1905,6 +1935,10 @@ text-align: center;
 
   .title-alert {
     font-size: 18px;
+  }
+
+  .contacts-label {
+    top: 50%;
   }
 }
 
