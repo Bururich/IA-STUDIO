@@ -82,30 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const token = "8480703852:AAEq6x9ILmZgaYbFmojmSLXeJNWg8E-sUWg";
-      const chatId = "780514846";
-
       const name = this.name.value;
       const email = this.email.value;
       const message = this.message.value;
 
-      const text = `Нове повідомлення з сайту:\n👤 Ім'я: ${name}\n� Електронна пошта: ${email}\n💬 Повідомлення: ${message}`;
-
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      fetch("https://nodejs-serverless-function-express-six-sage-38.vercel.app/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: text,
-          parse_mode: "HTML",
-        }),
+        body: JSON.stringify({ name, email, message }),
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.ok) {
             this.reset();
             showAlert("✔️ Message sent successfully!", "#4caf50");
-
           } else {
             showAlert("❌ Error sending message.", "#d50000");
           }
@@ -118,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((err) => {
           console.error(err);
           showAlert("⚠️ Connection error.", "#d50000");
-          alertBox.style.background = "#d50000"; 
           alertBox.classList.add("show");
           setTimeout(() => {
             alertBox.classList.remove("show");
