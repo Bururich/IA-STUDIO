@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const token = "8484145066:AAGiNE393K7_VfjrsHVdk9fE3-3isC9kCnc";
-      const chatId = "8459258829";
+      const token = "Secret";
+      const chatId = "Secret";
 
       const name = this.name.value;
       const phone = this.phone.value;
