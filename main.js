@@ -45,12 +45,12 @@ const wrapper = document.querySelector(".projects-wrapper");
 const leftBtn = document.querySelector(".scroll-btn.left");
 const rightBtn = document.querySelector(".scroll-btn.right");
 
-const step = 600; // шаг скролла
-const maxScroll = wrapper.scrollWidth - wrapper.clientWidth; // максимум вправо
+const step = 600; 
+const maxScroll = wrapper.scrollWidth - wrapper.clientWidth; 
 
 rightBtn.addEventListener("click", () => {
   if (wrapper.scrollLeft + step >= maxScroll) {
-    // если дошли до конца → возвращаемся в начало
+    
     wrapper.scrollTo({ left: 0, behavior: "smooth" });
   } else {
     wrapper.scrollBy({ left: step, behavior: "smooth" });
@@ -59,7 +59,7 @@ rightBtn.addEventListener("click", () => {
 
 leftBtn.addEventListener("click", () => {
   if (wrapper.scrollLeft - step <= 0) {
-    // если дошли до начала → прыгаем в конец
+    
     wrapper.scrollTo({ left: maxScroll, behavior: "smooth" });
   } else {
     wrapper.scrollBy({ left: -step, behavior: "smooth" });
